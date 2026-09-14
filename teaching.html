@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZESRWFVDP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-QZESRWFVDP');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Teaching | Neha Betai</title>
@@ -17,18 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink:    #1a1a2e;
-      --muted:  #5a5a72;
-      --accent: #c0392b;
-      --rule:   #dddde8;
-      --bg:     #faf9f7;
+      --ink:    #0f1f3d;
+      --muted:  #4a5568;
+      --accent: #1a56a0;
+      --rule:   #e2e8f0;
+      --bg:     #ffffff;
       --card:   #ffffff;
       --max:    760px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Source Sans 3', sans-serif; font-size: 17px; line-height: 1.7; color: var(--ink); background: var(--bg); }
 
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,249,247,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
     .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; height: 56px; }
     .nav-name { font-family: 'Lora', serif; font-weight: 600; font-size: 1rem; color: var(--ink); text-decoration: none; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -42,14 +34,54 @@
     .sub-label:first-child { margin-top: 0; }
 
     .teaching-grid { display: flex; flex-direction: column; margin-bottom: 1rem; }
-    .course { display: grid; grid-template-columns: 1fr auto; align-items: baseline; padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+    .course { display: grid; grid-template-columns: 1fr auto; align-items: baseline; padding: 0.6rem 0; border-bottom: 1px solid var(--rule); }
     .course:last-child { border-bottom: none; }
-    .course-name { font-weight: 600; font-size: 0.95rem; }
+    .course-name { font-weight: 400; font-size: 0.95rem; color: var(--ink); }
     .course-role { font-size: 0.85rem; color: var(--muted); margin-top: 0.1rem; }
     .course-year { font-size: 0.82rem; color: var(--muted); white-space: nowrap; margin-left: 1rem; }
 
+    .carousel {
+      max-width: var(--max); margin: 0 auto;
+      padding: 2rem 2rem 0;
+      position: relative;
+    }
+    .carousel-track {
+      overflow: hidden;
+      position: relative;
+      min-height: 100px;
+    }
+    .carousel-slide {
+      display: none;
+      padding: 1.5rem 2rem;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 4px 4px 0;
+      animation: fadeIn 0.6s ease;
+    }
+    .carousel-slide.active { display: block; }
+    .carousel-slide p {
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.7;
+    }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--rule);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .dot.active { background: var(--accent); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     footer { border-top: 1px solid var(--rule); text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
-
     @media (max-width: 600px) { .nav-links { gap: 1.2rem; } }
   </style>
 </head>
@@ -79,7 +111,7 @@
     </div>
     <div class="course">
       <div>
-        <div class="course-name">Macroeconomics &amp; Global Politics</div>
+        <div class="course-name">Global Politics</div>
         <div class="course-role">CTY Johns Hopkins University</div>
       </div>
       <div class="course-year">Summer 2022</div>
@@ -93,7 +125,7 @@
         <div class="course-name">Principles of Economics I</div>
         <div class="course-role">George Washington University</div>
       </div>
-      <div class="course-year">Fall 2021, Spring 2022, Fall 2024, Fall 2025</div>
+      <div class="course-year">Fall 2021, Spring 2022, Fall 2024, Fall 2025, Fall 2026</div>
     </div>
     <div class="course">
       <div>
@@ -104,17 +136,10 @@
     </div>
     <div class="course">
       <div>
-        <div class="course-name">International Economics</div>
+        <div class="course-name">International Trade and Economics</div>
         <div class="course-role">George Washington University</div>
       </div>
-      <div class="course-year">Fall 2022, Spring 2023</div>
-    </div>
-    <div class="course">
-      <div>
-        <div class="course-name">International Trade</div>
-        <div class="course-role">George Washington University</div>
-      </div>
-      <div class="course-year">Fall 2023</div>
+      <div class="course-year">Fall 2022, Spring 2023, Fall 2023</div>
     </div>
     <div class="course">
       <div>
@@ -125,6 +150,91 @@
     </div>
   </div>
 
+</div>
+
+<div style="display:none;"><div style="columns: 2; column-gap: 1.2rem; margin-top: 0.75rem;">
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Neha Betai led an amazing discussion and is one of my favorite TAs I have had at GW. She went out of her way to make this discussion a productive space to learn by encouraging engagement with a class that didn't always want to participate."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"I've never seen a TA who greatly understands the material they teach like Neha did. She really understood what she taught us. As a result, she was prepared to answer absolutely any questions that were asked of her."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Genuinely amazing TA. I learned more from discussions than I ever did during lectures."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Neha was amazing at synthesizing the information explained in the lecture and simplifying complex topics."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"The instructor is very knowledgeable in the course material. She also encourages students to participate a lot."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Actually works out math problems on the board, gives 1-on-1 help to anyone who needs it, tries to make sure you actually understand when you ask for help — she is very knowledgeable."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Neha does a great job of thoroughly describing economic principles in ways that are easy for young students to understand!"</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Great TA, she knows how to teach, very kind and understanding. She makes time to answer questions and have office hours at a time that is convenient for you."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"I felt very supported in my discussion class. All of the reviews of material we did in class were very clear and helpful to understanding the content."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"TA Betai clearly knew her way around the subject and was willing to help if you had questions. She was approachable and had a few good economics-based conversations outside of class."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Neha is so helpful and there is lots of time to ask questions! I really enjoyed discussion and the activities we did were helpful!"</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Neha reviewed and expanded upon ideas covered in class to help us understand the material."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Betai was knowledgeable and very approachable in class."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Ms. Betai was awesome at explaining concepts and handing out helpful worksheets to us."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"The discussions were excellent supplements to the lectures."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Neha is very helpful and knows her econ — definitely helped me when I struggled in this course."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Neha was very attentive and went over all of the major topics we talked about in class."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"Nice instructor, she is available and explains well."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"The discussion section was very helpful, and I appreciated having a quiz every class because it helped me make sure I was following the curriculum and not falling behind."</p>
+    </div>
+
+    <div style="break-inside: avoid; margin-bottom: 1.2rem; padding: 1.2rem 1.4rem; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <p style="font-size: 0.9rem; color: var(--ink); font-style: italic; line-height: 1.6;">"I liked that we were applying the information during the discussions and not just hearing it regurgitated."</p>
+    </div>
+
+  </div>
 </div>
 
 <footer>

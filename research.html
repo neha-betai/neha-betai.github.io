@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZESRWFVDP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-QZESRWFVDP');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Research | Neha Betai</title>
@@ -17,18 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink:    #1a1a2e;
-      --muted:  #5a5a72;
-      --accent: #c0392b;
-      --rule:   #dddde8;
-      --bg:     #faf9f7;
+      --ink:    #0f1f3d;
+      --muted:  #4a5568;
+      --accent: #1a56a0;
+      --rule:   #e2e8f0;
+      --bg:     #ffffff;
       --card:   #ffffff;
       --max:    760px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Source Sans 3', sans-serif; font-size: 17px; line-height: 1.7; color: var(--ink); background: var(--bg); }
 
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,249,247,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
     .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; height: 56px; }
     .nav-name { font-family: 'Lora', serif; font-weight: 600; font-size: 1rem; color: var(--ink); text-decoration: none; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -38,18 +30,18 @@
     .page { max-width: var(--max); margin: 0 auto; padding: 4rem 2rem; }
     .page-title { font-family: 'Lora', serif; font-size: 2rem; font-weight: 600; margin-bottom: 3rem; }
 
-    .sub-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; margin-top: 2.5rem; }
+    .sub-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; margin-top: 3rem; }
     .sub-label:first-child { margin-top: 0; }
 
-    .paper-list { display: flex; flex-direction: column; gap: 1.5rem; }
-    .paper { padding: 1.5rem; background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; transition: box-shadow 0.2s; }
-    .paper:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-    .paper h3 { font-family: 'Lora', serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 0.4rem; line-height: 1.4; }
-    .paper .coauthor { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.6rem; }
-    .paper .abstract { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.8rem; margin-top: 0.5rem; }
-    .paper-links { display: flex; gap: 1rem; }
-    .paper-links a { font-size: 0.8rem; font-weight: 600; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
-    .paper-links a:hover { color: var(--accent); border-color: var(--accent); }
+    .paper-list { display: flex; flex-direction: column; gap: 0; }
+    .paper { padding: 1.2rem 0; border-bottom: 1px solid var(--rule); }
+    .paper:last-child { border-bottom: none; }
+    .paper h3 { font-family: 'Lora', serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 0.3rem; line-height: 1.45; color: var(--ink); }
+    .paper .coauthor { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.4rem; }
+    .paper .abstract { font-size: 0.88rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.65; }
+    .paper-links { display: flex; gap: 1rem; margin-top: 0.5rem; }
+    .paper-links a { font-size: 0.8rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+    .paper-links a:hover { text-decoration: underline; }
 
     footer { border-top: 1px solid var(--rule); text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
 
@@ -75,21 +67,32 @@
   <div class="paper-list">
 
     <div class="paper">
-      <h3>Information, Investment and Interaction: How Workers Respond to AI <span style="font-family:'Source Sans 3',sans-serif; font-weight:600; font-size:0.8rem; color:var(--accent);">(Job Market Paper)</span></h3>
+      <h3>How Global Platform Workers Invest in AI: Experimental Evidence on Returns and Adjustment <span style="font-family:'Source Sans 3',sans-serif; font-weight:600; font-size:0.8rem; color:var(--accent);">(Job Market Paper)</span></h3>
+      <p class="abstract">How do workers decide how much to invest in AI? I survey a global sample of online platform workers and document a puzzle: adoption and reported productivity gains are high, yet investment in AI tools and learning remains low. The gap is not explained by income or AI exposure, and it persists among workers who report large gains. I develop a model of AI investment along two margins, the money workers spend and the time they commit, and test it in a randomized controlled trial. I compare an experiential effective-use arm, which gives actionable guidance on better using AI, with two arms conveying broader labor-market information framed as disruption or opportunity. The effective-use arm raises willingness to pay for AI tools whereas broad information about labor-market disruption or opportunity does not produce comparable effects. No arm raises intended training on average, but this null masks heterogeneity. Intended time investment rises with prior intensity of AI usage for work, and it is this productive experience that increases the response to treatments. Across both margins, workers invest more as expected returns rise, and money responds to returns more strongly than time. AI adoption may be widespread, but investment depends on prior work use, expected returns and how workers learn about them.</p>
     </div>
 
     <div class="paper">
-      <h3>Automation without Borders: The Impacts of Generative AI on International Service Outsourcing</h3>
-      <p class="coauthor">with Maggie Chen</p>
-      <p class="abstract">The outsourcing of routine cognitive work to developing countries has been a resilient component of globalization. This paper investigates how generative artificial intelligence (AI) reshapes cross-border service outsourcing by tracing firm and worker responses to the diffusion of AI in a global market for digital services. Using granular transaction data linking clients, workers, and skills from 2022–2024, together with a novel capability-based measure of AI automation exposure spanning 2,700 skill categories, we document a sharp contraction in cross-border outsourcing in highly exposed skill areas. Outsourcing volume falls by roughly 35 percent, with declines concentrated in developing-country destinations that previously specialized in codifiable work. These aggregate effects mask substantial reorganization. Firms consolidate remaining outsourcing into fewer, larger, and more complex contracts. Exposed workers complete fewer contracts but earn more per engagement, as a subset reallocates toward AI- and interaction-intensive tasks. Adjustment is uneven, leading to a 22-percentage-point increase in within-skill concentration of activity. A task-based trade framework rationalizes these patterns by showing how generative AI compresses cross-border wage and productivity arbitrages in routine tasks, shifting comparative advantage and redistributing gains from trade in digital services.</p>
+      <h3>Automation without Borders: Generative AI and Cross-Border Service Outsourcing</h3>
+      <p class="coauthor">with <a href="https://maggiexchen.weebly.com" target="_blank" style="color:var(--muted); text-decoration:none; border-bottom: 1px solid var(--rule);">Maggie Chen</a></p>
+      <p class="abstract">The cross-border outsourcing of codifiable cognitive work to developing countries has been a resilient engine of services trade and a pathway to export-led development. This paper examines how generative artificial intelligence (AI) reshapes service outsourcing and redistributes its gains. Using granular transaction data linking clients, workers, and 2,700 skills on a global digital-services platform from 2022 to 2024, together with a novel capability-based measure of skill-level automation exposure, we trace adjustments on both sides of the market. We find that underneath the aggregate contraction of outsourcing — concentrated in developing countries — lies significant restructuring in how buyers and workers trade. Buyers transact less frequently while consolidating into fewer, larger, and more complex contracts. Workers complete fewer contracts but earn more per engagement, narrowing the skills they supply while winning work in AI-complementary and interaction-intensive tasks. Adaptation is highly uneven: experienced, higher-rated workers reallocate successfully while others contract, and within-skill concentration rises by 14 percentage points as those best positioned to adapt capture a growing share of a shrinking market. A task-based trade framework rationalizes these patterns: by compressing the cross-border wage–productivity arbitrage in routine tasks, generative AI shifts comparative advantage and redistributes the gains from digital-services trade across countries and workers. Because the technology's benefits and its adjustment costs accrue to different labor markets, the findings bear directly on whether AI narrows or widens global human-capital and income gaps.</p>
       <div class="paper-links">
         <a href="#">Draft available upon request</a>
       </div>
     </div>
 
+  </div>
+
+  <p class="sub-label">Work in Progress</p>
+  <div class="paper-list">
+
     <div class="paper">
       <h3>Unlocking Choices: The Impact of Credit Availability on Product Mix &mdash; Evidence From India</h3>
-      <p class="coauthor">with Shatakshi Gupta</p>
+      <p class="coauthor">with <a href="https://sites.google.com/view/shatakshigupta/home" target="_blank" style="color:var(--muted); text-decoration:none; border-bottom: 1px solid var(--rule);">Shatakshi Gupta</a></p>
+    </div>
+
+    <div class="paper">
+      <h3>What Drives Demand for AI Governance?</h3>
+      <p class="coauthor">with <a href="https://maggiexchen.weebly.com" target="_blank" style="color:var(--muted); text-decoration:none; border-bottom: 1px solid var(--rule);">Maggie X. Chen</a></p>
     </div>
 
   </div>
