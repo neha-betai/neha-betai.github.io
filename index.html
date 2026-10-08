@@ -41,8 +41,12 @@
     .title { font-size: 1rem; color: var(--muted); margin-bottom: 1.5rem; font-weight: 300; }
     .title strong { color: var(--accent); font-weight: 600; }
     .bio { font-size: 1rem; margin-bottom: 1rem; line-height: 1.75; }
-    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 1.5rem; }
-    .tag { padding: 0.25rem 0.75rem; border: 1px solid var(--rule); border-radius: 2px; font-size: 0.8rem; color: var(--muted); }
+    .fields { margin: 1.4rem 0 1.6rem; padding: 0.9rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .field-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+    .field-list { list-style: none; font-family: 'Lora', serif; font-weight: 600; font-size: 1.05rem; line-height: 1.8; }
+    .field-list li::before { content: "\2022"; color: var(--accent); margin-right: 0.6rem; }
+    .bio a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--rule); }
+    .bio a:hover { border-bottom-color: var(--accent); }
     .hero-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
     .btn { display: inline-block; padding: 0.5rem 1.2rem; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 3px; text-decoration: none; transition: all 0.2s; }
     .btn-primary { background: var(--ink); color: #fff; }
@@ -80,13 +84,15 @@
   <div class="hero-text">
     <h1>Neha Betai</h1>
     <p class="title">PhD Candidate in Economics &nbsp;&middot;&nbsp; <strong>George Washington University</strong></p>
-    <p class="bio">I am a PhD candidate in the Department of Economics at George Washington University. My research focuses on International Trade, Development Economics, AI Economics, and Labor Economics.</p>
-    <p class="bio">Before joining GWU, I worked as a Research Assistant and Academic Associate at the Indian Institute of Management, Bangalore. I did my Masters in Economics from Jawaharlal Nehru University and got my bachelors in Economics from St. Xavier's College Mumbai.</p>
-    <div class="tags">
-      <span class="tag">International Trade</span>
-      <span class="tag">Development Economics</span>
-      <span class="tag">AI Economics</span>
-      <span class="tag">Labor Economics</span>
+    <p class="bio">I am a PhD candidate in Economics at George Washington University, and <strong>I am on the 2026&ndash;2027 job market.</strong> I am an applied microeconomist specializing in topics related to AI, labor, and international trade. I am a student member of the <a href="https://cer.columbian.gwu.edu/ai-economics" target="_blank">AI Economics Program</a> at GWU&rsquo;s Center for Economic Research.</p>
+    <p class="bio">Before my PhD, I was a Research Assistant to Rupa Chanda and an Academic Associate at the Indian Institute of Management, Bangalore. I hold an M.A. in Applied Economics from the Centre for Development Studies, Jawaharlal Nehru University, and a B.A. in Economics from St. Xavier&rsquo;s College, Mumbai.</p>
+    <div class="fields">
+      <p class="field-label">Research Interests</p>
+      <ul class="field-list">
+        <li>AI Economics, Economics of Technology</li>
+        <li>Labor Economics</li>
+        <li>International Trade and Development</li>
+      </ul>
     </div>
     <div class="hero-links">
       <a class="btn btn-primary" href="Resume_NehaBetai.pdf" target="_blank">Download CV</a>
