@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZESRWFVDP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QZESRWFVDP');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beyond Research | Neha Betai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:    #0f1f3d;
+      --muted:  #4a5568;
+      --accent: #1a56a0;
+      --rule:   #e2e8f0;
+      --bg:     #ffffff;
+      --card:   #ffffff;
+      --max:    760px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Source Sans 3', sans-serif; font-size: 17px; line-height: 1.7; color: var(--ink); background: var(--bg); }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
+    .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; height: 56px; }
+    .nav-name { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+    .page { max-width: var(--max); margin: 0 auto; padding: 4rem 2rem; }
+    .page-title { font-family: 'Lora', serif; font-size: 2rem; font-weight: 600; margin-bottom: 3rem; }
+
+
+    footer { border-top: 1px solid var(--rule); text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
+
+  
+    .intro { font-size: 1.05rem; margin-bottom: 2.5rem; }
+    .sub-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin: 2.2rem 0 0.5rem; }
+    .page p.body { font-size: 1rem; margin-bottom: 0.6rem; }
+    .photos { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; margin-top: 1rem; }
+    .photos figure.wide { grid-column: 1 / -1; }
+    .photos figure.wide img { aspect-ratio: 3 / 2; }
+    .photos figure { margin: 0; }
+    .photos img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 3px; }
+    .photos figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+    @media (max-width: 600px) { .nav-links { gap: 1.2rem; } .photos { grid-template-columns: 1fr; } .photos figure.wide { grid-column: auto; } }
+    @media (max-width: 600px) { .nav-inner { flex-wrap: wrap; height: auto; padding: 0.6rem 1rem; row-gap: 0.2rem; } .nav-links { flex-wrap: wrap; gap: 0.3rem 1.1rem; } }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="index.html">Neha Betai</a>
+    <ul class="nav-links">
+      <li><a href="research.html">Research</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html" class="active">Beyond Research</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <h1 class="page-title">Beyond Research</h1>
+
+  <p class="sub-label">Dance</p>
+  <p class="body">During COVID, I started learning Kathak, an Indian classical dance form, and completed four levels. In 2024, I started learning salsa.</p>
+
+  <p class="sub-label">Football</p>
+  <p class="body">I am a big football fan. I follow FC Barcelona.</p>
+
+  <p class="sub-label">Travel</p>
+  <div class="photos">
+    <figure class="wide"><img src="costa-rica.jpg" alt="Ziplining through a forest canopy"><figcaption>Costa Rica</figcaption></figure>
+    <figure><img src="zion.jpg" alt="A river valley with red rock cliffs"><figcaption>Zion National Park, Utah</figcaption></figure>
+    <figure><img src="istanbul.jpg" alt="Two kittens on stone steps"><figcaption>Istanbul, T&uuml;rkiye</figcaption></figure>
+    <figure><img src="malmo.jpg" alt="Buildings reflected in a canal under a cloudy sky"><figcaption>Malm&ouml;, Sweden</figcaption></figure>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Neha Betai &middot; George Washington University</p>
+</footer>
+</body>
+</html>

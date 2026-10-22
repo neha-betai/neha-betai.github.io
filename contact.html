@@ -30,7 +30,7 @@
 
     nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
     .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; height: 56px; }
-    .nav-name { font-family: 'Lora', serif; font-weight: 600; font-size: 1rem; color: var(--ink); text-decoration: none; }
+    .nav-name { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--accent); }
@@ -47,6 +47,7 @@
     footer { border-top: 1px solid var(--rule); text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
 
     @media (max-width: 600px) { .nav-links { gap: 1.2rem; } .contact-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .nav-inner { flex-wrap: wrap; height: auto; padding: 0.6rem 1rem; row-gap: 0.2rem; } .nav-links { flex-wrap: wrap; gap: 0.3rem 1.1rem; } }
   </style>
 </head>
 <body>
@@ -57,6 +58,7 @@
       <li><a href="research.html">Research</a></li>
       <li><a href="teaching.html">Teaching</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="about.html">Beyond Research</a></li>
     </ul>
   </div>
 </nav>
@@ -80,7 +82,7 @@
 </div>
 
 <footer>
-  <p>&copy; 2025 Neha Betai &middot; George Washington University</p>
+  <p>&copy; 2026 Neha Betai &middot; George Washington University</p>
 </footer>
 </body>
 </html>
