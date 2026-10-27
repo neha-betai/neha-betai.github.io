@@ -52,6 +52,14 @@
     .paper-links a { font-size: 0.85rem; font-weight: 600; color: var(--accent); text-decoration: none; }
     .paper-links a:hover { text-decoration: underline; }
 
+    .fold { margin-top: 3rem; }
+    .fold summary { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); cursor: pointer; list-style: none; }
+    .fold summary::-webkit-details-marker { display: none; }
+    .fold summary::before { content: "\25B8"; display: inline-block; width: 1.2rem; color: var(--accent); }
+    .fold[open] summary::before { content: "\25BE"; }
+    .fold summary:hover { color: var(--accent); }
+    .fold .paper-list { margin-top: 1rem; }
+
     footer { border-top: 1px solid var(--rule); text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
 
     @media (max-width: 600px) { .nav-links { gap: 1.2rem; } }
@@ -113,22 +121,8 @@
 
   </div>
 
-  <p class="sub-label">Book Chapters</p>
-  <div class="paper-list">
-
-    <div class="paper">
-      <h3>Role of Private Higher Education Institutions in Internationalization of Higher Education</h3>
-      <p class="coauthor">Chanda, R., &amp; Betai, N. V. (2023). In <em>Private Higher Education</em>. Routledge.</p>
-    </div>
-
-    <div class="paper">
-      <h3>The Skilled South Asian Diaspora in the OECD</h3>
-      <p class="coauthor">Chanda, R., &amp; Betai, N. V. (2021). In <em>Routledge Handbook of Asian Diaspora and Development</em> (8th ed.). Routledge.</p>
-    </div>
-
-  </div>
-
-  <p class="sub-label">Policy Papers</p>
+  <details class="fold">
+  <summary>Pre-PhD Research</summary>
   <div class="paper-list">
 
     <div class="paper">
@@ -139,7 +133,18 @@
       </div>
     </div>
 
+    <div class="paper">
+      <h3>The Skilled South Asian Diaspora in the OECD</h3>
+      <p class="coauthor">Chanda, R., &amp; Betai, N. V. (2021). In <em>Routledge Handbook of Asian Diaspora and Development</em> (8th ed.). Routledge.</p>
+    </div>
+
+    <div class="paper">
+      <h3>Role of Private Higher Education Institutions in Internationalization of Higher Education</h3>
+      <p class="coauthor">Chanda, R., &amp; Betai, N. V. (2023). In <em>Private Higher Education</em>. Routledge.</p>
+    </div>
+
   </div>
+  </details>
 </div>
 
 <footer>
